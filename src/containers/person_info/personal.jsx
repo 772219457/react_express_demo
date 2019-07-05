@@ -1,29 +1,29 @@
-/*
-用户个人中心路由组件
- */
+/**
+ *
+ *
+ * */
 
-import React from 'react'
-import {Result, List, WhiteSpace, Button, Modal} from 'antd-mobile'
+import React, {Component} from 'react'
 import {connect} from 'react-redux'
+import {Result, List, WhiteSpace, Button, Modal} from 'antd-mobile'
 import Cookies from 'js-cookie'
 import {resetUser} from '../../redux/actions'
 
 const Item = List.Item
 const Brief = Item.Brief
 
-class Personal extends React.Component {
+class Personal extends Component {
 
-    logout = () => {
-        // alert('-----')
+    handleLogOut = () => {
         Modal.alert('退出', '确定退出登陆吗?', [
             {text: '取消'},
             {
                 text: '确定',
-                onPress: ()=> {
+                onPress: () => {
 
-                    // 干掉cookie中userid
+                    // 移除cookie中userId
                     Cookies.remove('userId')
-                    // 干掉redux管理user
+                    // 移除redux管理user
                     this.props.resetUser()
                 }
             }
@@ -35,11 +35,10 @@ class Personal extends React.Component {
         return (
             <div style={{marginBottom:50, marginTop:50}}>
                 <Result
-                    img={<img src={require(`../../assets/imgs/headers/${headImg}.png`)} style={{width: 50}} alt="header"/>}
+                    img={<img src={require(`../../assets/imgs/headers/${headImg}.png`)} style={{width: 50}} alt="头像"/>}
                     title={username}
                     message={company}
                 />
-
                 <List renderHeader={() => '相关信息'}>
                     <Item multipleLine>
                         <Brief>职位: {post}</Brief>
@@ -48,9 +47,7 @@ class Personal extends React.Component {
                     </Item>
                 </List>
                 <WhiteSpace/>
-                <List>
-                    <Button type='warning' onClick={this.logout}>退出登录</Button>
-                </List>
+                <Button type='warning' onClick={this.handleLogOut}>退出登录</Button>
             </div>
         )
     }

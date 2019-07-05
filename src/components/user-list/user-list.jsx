@@ -25,7 +25,7 @@ class UserList extends Component {
                 <WhiteSpace/>
                 <Card onClick={() => this.props.history.push(`/chat/${user._id}`)}>
                   <Header
-                    thumb={require(`../../assets/images/${user.header}.png`)}
+                    thumb={require(`../../assets/imgs/headers/${user.headImg}.png`)}
                     extra={user.username}
                   />
                   <Body>
