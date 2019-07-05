@@ -1,69 +1,63 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<b>react,node.js,学习demo,boss直聘项目</b>
 
-## Available Scripts
 
-In the project directory, you can run:
+## 分支说明：
 
-### `npm start`
+master分支：前后端统一开发的版本；可以用于学习nodejs+mongodb+express+react+redux相关知识；
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## 技术栈
 
-### `npm test`
+**前端技术栈：** react + redux + ES6/7 + less + an
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**服务端技术栈：** nodejs + express  + mongodb
 
-### `npm run build`
+**网络协议：** http + sockieIO
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## 前序准备
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**运行前准备：**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1、需要在本地调试及开发：
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+   由于此项目是基于nodejs和mongodb的前后端结合项目，你需要进行nodejs和mongodb的相关准备工作。项目运行之前，请确保系统已经安装以下应用：
+   
+   (1)、node (6.0 及以上版本)。使用细节，请参考：[node的下载及安装。](https://nodejs.org/en/download/)
+   
+   (2)、mongodb 。使用细节，请参考：[mongodb的下载及使用。](https://pan.baidu.com/s/1jIxPJrK)【下载，db/log配置，开启服务，use touzi，导入数据】
+   
+   (3)、robomongod。使用细节，请参考：[robomongod的下载及使用。](https://pan.baidu.com/s/1hsQuc08)（注意：mongodb可视化视图工具，本项目不是必须安装，主要用于方便查看数据库数据）。
+        
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 功能
+ - 登录/退出 -- 完成
+ - 首页 -- 完成
+ - 用户列表 -- 完成
+ - 信息列表 -- 完成
+ - 注册 -- 完成
+ - 查看求职者或者boss信息 -- 完成
+ - 聊天 -- 完成
 
-## Learn More
+## 目录结构
+```shell
+├── server                     // node服务端
+│   ├── public                 // 静态资源
+│   ├── db                     // db数据模型定义
+│   ├── bin/www                // express服务器启动项
+│   ├── route/index.js         // api接口
+├── src                        // 源代码
+│   ├── assets                 // 图片,样式等静态资源
+│   ├── components             // 全局公用组件
+│   ├── containers             // 项目布局组件和页面
+│   ├── redux                  // redux数据存储器
+│   ├── api                    // 封装ajax请求
+│   ├── sockieIO               // sockieIO协议
+│   ├── utils                  // 全局公用方法
+│   ├── index.js               // 入口 加载组件 初始化
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License 网上学习视频，哔哩哔哩搜索尚硅谷
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# react_express_demo
